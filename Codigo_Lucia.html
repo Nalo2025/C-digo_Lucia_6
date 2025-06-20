@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Código de 6 Cifras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    #code {
+      font-size: 2em;
+      margin: 20px;
+      padding: 10px 20px;
+      background: #fff;
+      border: 2px solid #007BFF;
+      border-radius: 8px;
+      color: #007BFF;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Generador de Código de 6 Cifras</h1>
+  <div id="code">------</div>
+  <button onclick="generateCode()">Generar Código</button>
+
+  <script>
+    function generateCode() {
+      const code = Math.floor(100000 + Math.random() * 900000);
+      document.getElementById('code').textContent = code;
+    }
+  </script>
+</body>
+</html>
